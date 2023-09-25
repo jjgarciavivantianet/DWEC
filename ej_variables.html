@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <script>
+            {
+                var primeraVariable="Visible en el bloque";
+                let segundaVariable="No visible en el bloque";
+                
+            }
+            console.log(primeraVariable);
+            console.log(segundaVariable);
+        </script>
+        <script>
+                var primeraVariable="Fuera de bloque";
+                    function miFuncion()
+                    {
+                        var primeraVariable="Detro del bloque mismo nombre";
+                        return 0; //se llama igual pero solo existe dentro de la función
+                    }
+                    console.log(primeraVariable);
+        </script>
+        <script>
+            const nombre='Cristina'; //No modificable en el restro del código
+            let texto='hola';
+            var cantidad='palabra';
+            nombre='pepe';// ERROR 
+            texto='adios';
+            cantidad='frase';
+        </script>
+    </body>
+</html>
