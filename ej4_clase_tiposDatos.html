@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="witdh=device-width, initial-scale=1.0">
+        <title> Tipos de datos </title>
+    </head>
+    <body>
+        <!--<script>
+          /* var respuesta= window.prompt("¿Cuál es tu nombre?", "Sin nombre");
+            //console.log(`hola, ${respuesta}`);
+            console.log("hola," +respuesta);
+            console.log(typeOf(respuesta));
+            window.confirm("¿Eres de esta clase?");*/
+        </script>
+        <script>
+           var mifecha = new Date();
+            var hora = mifecha.getHours();
+            var minutos = mifecha.getMinutes();
+            var segundos = mifecha.getSeconds();
+
+            texto.innerHTML = hora + ":" + minutos + ":" + segundos;
+
+            console.log(hora + ":" + minutos + ":" + segundos);   
+        </script>-->
+        <script>
+            function tablamult(tabla, fin =10)//fin es el defecto por si no se mete una variable 
+            {
+                for (i=0; i <= fin; i++)
+                console.log(tabla+ "x" + i, "=", tabla*i);
+            }
+            tablamult(2);//tabla de multiplicar del 2 al 10
+            tablamult(6, 20);//tabla de multiplicar del 6 hasta el 20
+        </script>
+        <script>
+            arguments=4;
+            function tabsuma ()
+            {
+                suma=0;
+                for (i=0; i<=arguments.length;i++)
+                {
+                    suma=suma+arguments[i];
+                    //console.log(arguments+ "+" + i, "=", suma);
+                    
+                }
+            }
+            tabsuma(2);
+        </script>
+    </body>
+</html>
