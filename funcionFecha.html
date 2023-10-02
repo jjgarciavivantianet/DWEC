@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="witdh=device-width, initial-scale=1.0">
+        <title> Función flecha </title>
+    </head>
+        <body>
+            <script>
+                
+                let res=(base,exponente)=>
+                {
+                    if(exponente==0)
+                    {
+                        return 1;
+                    }
+                    ex=base;
+                    for(i=1; i<exponente || exponente>0 ; i++)
+                    {
+                         ex*=base;
+                        
+                    }
+                    return ex;
+                }
+                var base =prompt("Dame la base: ");
+                var exponente=prompt("Dame el exponente: ");
+                alert(base+"^"+exponente+"="+res(base, exponente));
+            </script>
+        </body>
+    </html>
