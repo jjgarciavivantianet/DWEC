@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="witdh=device-width, initial-scale=1.0">
+        <title> Tipos de datos </title>
+    </head>
+    <body>
+        <script>
+            var usuario=Number(prompt("¿Qué número crees que es?"));
+            var num=Math.ceil(Math.random()*100);
+            var cont=0;
+
+            while(usuario!=num)
+            {
+                if(usuario>num) 
+                    usuario=Number(prompt("El número que estas intentando adivinar es menor que "+usuario+"\nPrueba de nuevo"));
+                else 
+                    usuario=Number(prompt("El número que estas intentando adivinar es mayor que "+usuario+"\nPrueba de nuevo"));
+                cont++
+            }
+
+            alert("¡Lo has adivinado era "+num+"!\nHas tenido "+cont+" fallos");
+
+        </script>
+    </body>
+    </html>
