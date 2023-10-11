@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="witdh=device-width, initial-scale=1.0">
+        <title> Array destructuración </title>
+    </head>
+    <body>
+       
+        <script>
+          //separar una estructura
+          const matriz=[5,6];
+          const [a,b]=matriz;
+
+          const matriz2=[5,6,7,9];
+          const [c,d]=matriz2; // c=5 d=6 las démas se descartan
+
+          const matriz3=[5,6,3,9];
+          const [first, third]=matriz3;//first=5 third=3;
+
+          const matriz4=[5];
+          const [e,f]=matriz4;//e=4 f=undefined
+
+          var a1=7;
+          var b1=6;
+
+          const matriz5=[a1,b1]=[b1,a1];
+          console.log(a1,b1); 
+        </script>
+    </body>
+    </html>

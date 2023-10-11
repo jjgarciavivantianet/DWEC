@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="witdh=device-width, initial-scale=1.0">
+        <title> Array destructuración </title>
+    </head>
+    <body>
+       
+        <script>
+            //Spread
+            const matriz=[1,2,3,4,5]
+          //const debug=(param)=>console.log(param);
+          const debug=(param)=>console.log(...param);
+          debug(matriz);
+          //desestructura una matriz sin importar cuantos parametros tenga en ella
+
+            //Rest
+          const debug2=(...param)=>console.log(param);
+          debug2(1,2,3,4,5);
+
+          const elements=[5,4,3,2];
+          const[first,...rest]=elements;
+          console.log(elements)//first=5 rest=[4,3,2]
+        </script>
+    </body>
+    </html>
