@@ -1,0 +1,31 @@
+function Viajeros(numero) {
+    // Convierte el número de viajeros en una cadena de texto.
+    const numeroString = numero.toString();
+    // Inicializa la variable 'total' en 0 para llevar la cuenta de los viajeros.
+    let total = 0;
+
+    // Inicia un bucle que recorre la cadena 'numeroString' de derecha a izquierda, de dos en dos.
+    for (let i = numeroString.length - 1; i >= 0; i = i - 2) {
+        // Obtiene el número de personas que subieron en la posición actual.
+        const subieron = parseInt(numeroString[i]);
+        // Verifica si 'subieron' no es un número válido.
+        if (isNaN(subieron)) {
+            console.log("Error, número no válido");
+            return; // Sale de la función si hay un error.
+        }
+
+        // Obtiene el número de personas que bajaron en la posición anterior (o 0 si no hay).
+        const bajaron = parseInt(numeroString[i - 1] || 0);
+
+        // Calcula la diferencia entre las personas que subieron y las que bajaron, actualizando 'total'.
+        total = total + subieron - bajaron;
+    }
+
+    // Imprime el total de viajeros en la consola.
+    console.log("El total de viajeros es: " + total);
+}
+
+// Pide al usuario que ingrese el número de viajeros a través de una ventana de diálogo.
+const numero = prompt("Número de viajeros: ");
+// Llama a la función 'Viajeros' con el número ingresado como argumento.
+Viajeros(numero);

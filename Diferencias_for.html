@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="witdh=device-width, initial-scale=1.0">
+        <title> Diferencias de los for </title>
+    </head>
+    <body>
+       
+        <script>
+            const hoy=[3,4,7,,{nombre:"juan", apellidos: "garcia"}];
+            //console.log(hoy);
+            var limit=hoy.length;
+            for(i=0; i<limit;i++)
+            {
+                console.log(hoy[i]);
+            }
+            console.log("for in");//no sale los indices que estan vacios
+            for(i in hoy)
+            {
+                console.log(hoy[i]);
+            }
+            console.log("for of");
+            for(k in hoy)
+            {
+                console.log(hoy[k]);
+            }
+        </script>
+    </body>
+    </html>
