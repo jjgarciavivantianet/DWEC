@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="witdh=device-width, initial-scale=1.0">
+        <title> funciones dentro de var </title>
+    </head>
+    <body>
+        <script>
+            let resultado=multiplicar(2,3);
+            function multiplicar(a,b)
+            {
+                return a*b;
+            }
+            console.log(resultado);
+
+            let resultado2=function hola()
+            {
+                console.log("hola");
+            }
+            resultado2();
+            console.log(resultado2());
+
+            let producto=function (a,b){return a+b;}
+            let resultado3=producto(4,5);
+            console.log(resultado3);
+            
+            
+            //funcion callbacks
+            const funcion2=function()
+            {
+                console.log("La función 2 ha sido ejecutada ");
+            }
+            const funcion1=function(callback)
+            {
+                callback();
+            }
+            funcion1(funcion2);
+
+
+            //funcion anonima(sin nombre) y autoinvocada por los ()
+            (function(user)
+            {
+                console.log("Hola " + user);
+            })("pepe");
+            
+            (function () { alert ("¡Hola!");}());
+
+            
+     </script>
+    </body>
+</html>

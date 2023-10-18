@@ -17,31 +17,33 @@
 
             Modificación: el número e viajeros puede ser de más de un dígito.   
            */
-           function Viajeros(numero) 
+           function viajeros(numero) 
            {
-            const numeroString = numero.toString();
-            let total = 0;
+            const numeroString = numero.toString();//pasar el numero a string
+            let total = 0;//total de pasajeros en el tren
 
-            for (let i = numeroString.length - 1; i >= 0; i =i-2) //recorre en string de 2 en dos
+            for (let i = numeroString.length-1; i>=0;i=i-2) //recorre en string de 2 en dos
             {
-                const subieron = parseInt(numeroString[i]);
-                if (isNaN(subieron)) 
+                const subieron = parseInt(numeroString[i]);//pasarlo a entero
+                if (isNaN(subieron))//si no es numero o es nulo
                 {
                     console.log("Error, número no válido");
                     break;//sale de la funcion
                 }
-
-                const bajaron = parseInt(numeroString[i - 1] || 0); //calcula la gente que ha bajado, si no a bjado nadie se podrán como valor 0
-                total = total+subieron - bajaron;
+                
+                const bajaron = parseInt(numeroString[i-1]||0); //calcula la gente que ha bajado, si no a bajado nadie se podrán como valor 0
+                if (bajaron==null||bajaron<0)//si no es numero o es nulo
+                {
+                    console.log("Error, número no válido");
+                    break;//sale de la funcion
+                }
+                //como el bucle va de dos en dos se le resta una posición para que lea las bajadas que hay
+                total = total+subieron - bajaron;//calculamos el total
         }
-
-        console.log("El total de viajeros es: " + total);
+        console.log("Viajeros en el tren: " + total);
     }
-
-    const numero = prompt("Número de viajeros: ");
-    Viajeros(numero);
-
-
+    const numero = prompt("Número a introducir: ");
+    viajeros(numero);
         </script>
     </body>
     </html>
