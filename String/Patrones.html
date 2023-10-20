@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="witdh=device-width, initial-scale=1.0">
+        <title> PATRONES </title>
+    </head>
+    <body>
+        <script>
+            cadena=prompt("Introduce una cadena de texto:");
+            cont=0;
+        
+            cadenaM=cadena.toUpperCase();
+            while (cadenaM!=null)
+            {
+                if (cadenaM.search("00"))
+                {
+                    numPatrones(cadenaM)
+                    cadenaM.remove.search("00");
+                }
+                if (cadenaM.search("101"))
+                {
+                    numPatrones(cadenaM)
+                    cadenaM.remove.search("101");
+                }
+                if (cadenaM.search("ABC"))
+                {
+                    numPatrones(cadenaM)
+                    cadenaM.remove.search("ABC");
+                }
+                if (cadenaM.search("H0"))
+                {
+                    numPatrones(cadenaM)
+                    cadenaM.remove.search("H0");
+                }
+
+                
+                
+                
+            }
+            numPatrones=function(txto)
+            {
+                    return cont++;
+            }
+            alert("Número de veces que se repite: "+cont);
+
+        </script>
+    </body>
+</html>
